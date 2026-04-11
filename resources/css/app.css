@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+@source '../views';
+@source '../js/**/*.{ts,tsx}';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@theme {
+    --font-sans:
+        'Manrope', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif:
+        'Fraunces', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+
+    --color-background: #0c1117;
+    --color-surface: #121a22;
+    --color-surface-strong: #18222d;
+    --color-surface-soft: rgba(18, 26, 34, 0.84);
+    --color-text: #edf3f7;
+    --color-muted: #9eabb6;
+    --color-line: rgba(171, 190, 208, 0.18);
+    --color-primary: #68b7ad;
+    --color-primary-strong: #4f978f;
+    --color-primary-soft: rgba(104, 183, 173, 0.16);
+    --color-accent: #d79665;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background:
+            radial-gradient(
+                circle at top left,
+                rgba(104, 183, 173, 0.16),
+                transparent 32%
+            ),
+            radial-gradient(
+                circle at top right,
+                rgba(215, 150, 101, 0.14),
+                transparent 24%
+            ),
+            linear-gradient(180deg, #111821 0%, #0c1117 46%, #090d12 100%);
+        color: var(--color-text);
+    }
+
+    ::selection {
+        background: rgba(104, 183, 173, 0.28);
+        color: var(--color-text);
+    }
+
+    a,
+    button {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
