@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/blank-react-starter-kit",
+    "name": "portfolio/diego-molero",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "El portafolio de Diego Molero, un desarrollador web / multiplataforma",
     "keywords": [
         "laravel",
         "framework"
