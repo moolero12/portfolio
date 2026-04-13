@@ -37,9 +37,9 @@ export type ContactLink = {
 export const navigationItems: NavigationItem[] = [
     { label: 'Inicio', href: '#inicio' },
     { label: 'Sobre mí', href: '#sobre-mi' },
+    { label: 'Proyectos', href: '#proyectos' },
     { label: 'Habilidades', href: '#habilidades' },
     { label: 'Experiencia', href: '#experiencia' },
-    { label: 'Proyectos', href: '#proyectos' },
     { label: 'Contacto', href: '#contacto' },
 ];
 
