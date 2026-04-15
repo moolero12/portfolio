@@ -1,3 +1,4 @@
+import { TechIcon } from '@/components/tech-icon';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Project } from '@/data/portfolio';
@@ -38,6 +39,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 <CardContent className="mt-auto flex flex-wrap gap-2.5 pt-0">
                     {project.stack.map((item) => (
                         <Badge key={item} variant="secondary">
+                            <TechIcon
+                                name={item}
+                                className="shrink-0 text-[var(--color-muted)]"
+                            />
                             {item}
                         </Badge>
                     ))}
