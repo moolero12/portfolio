@@ -12,7 +12,7 @@ import { PortfolioLayout } from '@/layouts/portfolio-layout';
 export default function Home() {
     return (
         <>
-            <Head title="Portfolio">
+            <Head>
                 <meta
                     name="description"
                     content="Portfolio personal de Diego Molero Menéndez, desarrollador Full Stack Junior con experiencia en Laravel, React, Inertia.js, aplicaciones híbridas y soporte IT."
