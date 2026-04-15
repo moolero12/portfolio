@@ -21,7 +21,7 @@ export function EducationList() {
                             key={`${item.title}-${item.period}`}
                             className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.22)]"
                         >
-                            <p className="text-sm tracking-[0.2em] text-[var(--color-muted)] uppercase">
+                            <p className="font-mono text-sm tracking-[0.2em] text-[var(--color-muted)] uppercase">
                                 {item.period}
                             </p>
                             <h3 className="mt-3 text-xl font-semibold text-[var(--color-text)]">

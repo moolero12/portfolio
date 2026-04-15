@@ -11,11 +11,11 @@ export function Hero() {
             <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl items-center gap-14 px-6 py-16 sm:px-8 md:py-24 lg:grid-cols-[minmax(0,1.25fr)_minmax(20rem,0.85fr)] lg:px-10">
                 <div className="space-y-8">
                     <div className="space-y-5">
-                        <span className="inline-flex rounded-full border border-[var(--color-line)] bg-[var(--color-surface-strong)] px-4 py-1.5 text-[0.72rem] font-semibold tracking-[0.24em] text-[var(--color-primary)] uppercase">
+                        <span className="inline-flex rounded-full border border-[var(--color-line)] bg-[var(--color-surface-strong)] px-4 py-1.5 font-mono text-[0.72rem] font-semibold tracking-[0.24em] text-[var(--color-primary)] uppercase">
                             Disponible para seguir creciendo
                         </span>
                         <div className="space-y-4">
-                            <p className="text-sm tracking-[0.28em] text-[var(--color-muted)] uppercase">
+                            <p className="font-mono text-sm tracking-[0.28em] text-[var(--color-muted)] uppercase">
                                 {profile.location}
                             </p>
                             <h1 className="max-w-4xl font-serif text-5xl leading-none text-balance text-[var(--color-text)] sm:text-6xl lg:text-7xl">
@@ -27,6 +27,14 @@ export function Hero() {
                         </div>
                         <p className="max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
                             {profile.intro} {profile.summary}
+                            <span
+                                className="ml-1 inline-block h-[1.1em] w-[2px] translate-y-[0.15em] bg-[var(--color-primary)]"
+                                style={{
+                                    animation:
+                                        'blink-caret 1s step-end infinite',
+                                }}
+                                aria-hidden="true"
+                            />
                         </p>
                     </div>
 

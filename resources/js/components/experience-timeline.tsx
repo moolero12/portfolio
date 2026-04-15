@@ -24,7 +24,7 @@ export function ExperienceTimeline() {
                             <div className="space-y-5">
                                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                                     <div className="space-y-2">
-                                        <p className="text-sm tracking-[0.22em] text-[var(--color-muted)] uppercase">
+                                        <p className="font-mono text-sm tracking-[0.22em] text-[var(--color-muted)] uppercase">
                                             {item.period}
                                         </p>
                                         <div>

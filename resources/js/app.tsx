@@ -1,4 +1,5 @@
 import '../css/app.css';
+import '@fontsource-variable/geist-mono';
 
 import type { ResolvedComponent as ReactComponent } from '@inertiajs/react';
 import { createInertiaApp } from '@inertiajs/react';
