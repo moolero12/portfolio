@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { heroStats, profile } from '@/data/portfolio';
+import { trackPlausibleEvent } from '@/lib/plausible';
 
 export function Hero() {
     return (
@@ -33,18 +34,40 @@ export function Hero() {
                             {profile.intro} {profile.summary}
                             <span
                                 aria-hidden="true"
-                                className="ml-2 inline-block h-[1.18em] w-[2px] translate-y-0.5 align-middle bg-[var(--color-primary)] opacity-80"
-                                style={{ animation: 'blink-caret 1.15s step-end infinite' }}
+                                className="ml-2 mb-2 inline-block h-[1.18em] w-[2px] translate-y-0.5 bg-[var(--color-primary)] align-middle opacity-80"
+                                style={{
+                                    animation:
+                                        'blink-caret 1.15s step-end infinite',
+                                }}
                             />
                         </p>
                     </div>
 
                     <div className="flex flex-col gap-4 sm:flex-row">
                         <Button asChild size="lg">
-                            <a href="#proyectos">Ver proyectos destacados</a>
+                            <a
+                                href="#proyectos"
+                                onClick={() =>
+                                    trackPlausibleEvent('View Project Section')
+                                }
+                            >
+                                Ver proyectos destacados
+                            </a>
                         </Button>
                         <Button asChild variant="secondary" size="lg">
-                            <a href="#contacto">Ir a la sección de contacto</a>
+                            <a
+                                href="#contacto"
+                                onClick={() =>
+                                    trackPlausibleEvent('Contact Click', {
+                                        props: {
+                                            location: 'hero',
+                                            target: 'contact-section',
+                                        },
+                                    })
+                                }
+                            >
+                                Ir a la sección de contacto
+                            </a>
                         </Button>
                     </div>
                 </div>

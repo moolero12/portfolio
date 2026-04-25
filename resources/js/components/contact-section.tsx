@@ -2,6 +2,7 @@ import { Section } from '@/components/section';
 import { SectionHeading } from '@/components/section-heading';
 import { Button } from '@/components/ui/button';
 import { contactLinks } from '@/data/portfolio';
+import { trackPlausibleEvent } from '@/lib/plausible';
 
 export function ContactSection() {
     return (
@@ -19,7 +20,17 @@ export function ContactSection() {
                 >
                     <div className="pt-2">
                         <Button asChild size="lg">
-                            <a href="mailto:diegomolero97@gmail.com">
+                            <a
+                                href="mailto:diegomolero97@gmail.com"
+                                onClick={() =>
+                                    trackPlausibleEvent('Contact Click', {
+                                        props: {
+                                            location: 'contact-section',
+                                            target: 'email',
+                                        },
+                                    })
+                                }
+                            >
                                 Escribirme por email
                             </a>
                         </Button>
@@ -60,6 +71,19 @@ export function ContactSection() {
                                     item.href.startsWith('mailto:')
                                         ? undefined
                                         : 'noreferrer'
+                                }
+                                onClick={() =>
+                                    trackPlausibleEvent(
+                                        item.label === 'GitHub'
+                                            ? 'GitHub Click'
+                                            : 'Contact Click',
+                                        {
+                                            props: {
+                                                location: 'contact-section',
+                                                target: item.label,
+                                            },
+                                        },
+                                    )
                                 }
                                 className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 shadow-[0_10px_30px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)]"
                             >

@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'plausible' => [
+        'domain' => env('PLAUSIBLE_DOMAIN'),
+        'script_src' => env('PLAUSIBLE_SCRIPT_SRC'),
+    ],
+
 ];

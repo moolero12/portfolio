@@ -40,6 +40,36 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=fraunces:500,600,700|manrope:400,500,600,700,800" rel="stylesheet" />
 
+        @if (filled(config('services.plausible.script_src')))
+            {{-- Plausible es privacy-friendly y no usa cookies por defecto, así que esta integración no requiere banner de cookies. --}}
+            <script
+                async
+                src="{{ e(config('services.plausible.script_src')) }}"
+            ></script>
+            <script>
+                window.plausible =
+                    window.plausible ||
+                    function () {
+                        (plausible.q = plausible.q || []).push(arguments);
+                    };
+
+                plausible.init =
+                    plausible.init ||
+                    function (options) {
+                        plausible.o = options || {};
+                    };
+
+                plausible.init();
+            </script>
+        @elseif (filled(config('services.plausible.domain')))
+            {{-- Plausible es privacy-friendly y no usa cookies por defecto, así que esta integración no requiere banner de cookies. --}}
+            <script
+                defer
+                data-domain="{{ e(config('services.plausible.domain')) }}"
+                src="https://plausible.io/js/script.js"
+            ></script>
+        @endif
+
         <meta property="og:title" content="{{ $pageTitle }}">
         <meta property="og:description" content="{{ $pageDescription }}">
         <meta property="og:type" content="{{ $pageType }}">

@@ -2,6 +2,7 @@ import { TechIcon } from '@/components/tech-icon';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Project } from '@/data/portfolio';
+import { trackPlausibleEvent } from '@/lib/plausible';
 import { cn } from '@/lib/utils';
 
 type ProjectCardProps = {
@@ -55,6 +56,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
                             aria-label={`Ver ${project.name} en una nueva pestaña`}
                             target="_blank"
                             rel="noreferrer"
+                            onClick={() =>
+                                trackPlausibleEvent('View Project', {
+                                    props: {
+                                        project: project.name,
+                                    },
+                                })
+                            }
                             className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] transition duration-200 hover:gap-3"
                         >
                             {project.hrefLabel ?? 'Ver proyecto'}
