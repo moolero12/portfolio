@@ -22,6 +22,8 @@ export type Project = {
     summary: string;
     description: string;
     stack: string[];
+    imageAlt?: string;
+    imageSrc?: string;
     href?: string;
     hrefLabel?: string;
     featured?: boolean;
@@ -229,6 +231,9 @@ export const projects: Project[] = [
             'Tailwind CSS',
             'APIs',
         ],
+        imageSrc: '/mbuilder.png',
+        imageAlt:
+            'Captura previa de mbuilder, la plataforma web para montar PCs por piezas.',
         href: 'https://www.mbuilder.es',
         hrefLabel: 'Ver proyecto',
         featured: true,
@@ -240,6 +245,9 @@ export const projects: Project[] = [
         description:
             'Adaptación del concepto de mbuilder a una aplicación de escritorio desarrollada con Java y JavaFX, conectada a base de datos y APIs.',
         stack: ['Java', 'JavaFX', 'MySQL', 'APIs', 'CSS'],
+        imageSrc: '/mbuilder-desktop.png',
+        imageAlt:
+            'Captura previa de mbuilder-desktop, la versión de escritorio del proyecto.',
         featured: false,
     },
 ];

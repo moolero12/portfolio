@@ -34,7 +34,7 @@ export function Hero() {
                             {profile.intro} {profile.summary}
                             <span
                                 aria-hidden="true"
-                                className="ml-2 mb-2 inline-block h-[1.18em] w-[2px] translate-y-0.5 bg-[var(--color-primary)] align-middle opacity-80"
+                                className="mb-2 ml-2 inline-block h-[1.18em] w-[2px] translate-y-0.5 bg-[var(--color-primary)] align-middle opacity-80"
                                 style={{
                                     animation:
                                         'blink-caret 1.15s step-end infinite',
