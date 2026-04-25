@@ -31,6 +31,11 @@ export function Hero() {
                         </div>
                         <p className="max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
                             {profile.intro} {profile.summary}
+                            <span
+                                aria-hidden="true"
+                                className="ml-2 inline-block h-[1.18em] w-[2px] translate-y-0.5 align-middle bg-[var(--color-primary)] opacity-80"
+                                style={{ animation: 'blink-caret 1.15s step-end infinite' }}
+                            />
                         </p>
                     </div>
 
