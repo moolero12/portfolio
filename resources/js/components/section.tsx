@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 type SectionProps = PropsWithChildren<
     HTMLAttributes<HTMLElement> & {
         containerClassName?: string;
+        labelledBy?: string;
     }
 >;
 
@@ -14,6 +15,7 @@ export function Section({
     children,
     className,
     containerClassName,
+    labelledBy,
     ...props
 }: SectionProps) {
     const { ref, isInView } = useInView({ threshold: 0.08 });
@@ -21,6 +23,7 @@ export function Section({
     return (
         <section
             ref={ref}
+            aria-labelledby={labelledBy}
             className={cn(
                 'fade-in-section py-20 sm:py-24',
                 isInView && 'is-visible',

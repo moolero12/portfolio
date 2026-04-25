@@ -4,10 +4,11 @@ import { experienceItems } from '@/data/portfolio';
 
 export function ExperienceTimeline() {
     return (
-        <Section id="experiencia">
+        <Section id="experiencia" labelledBy="experiencia-heading">
             <div className="space-y-12">
                 <SectionHeading
                     eyebrow="Experiencia"
+                    headingId="experiencia-heading"
                     title="Experiencia profesional real en desarrollo y sistemas."
                     description="El recorrido combina desarrollo web corporativo, aplicaciones híbridas y una etapa previa en sistemas y soporte técnico. Esa mezcla refuerza mi versatilidad y mi capacidad de adaptación."
                 />
@@ -19,7 +20,10 @@ export function ExperienceTimeline() {
                             className="relative grid gap-4 rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.22)] lg:grid-cols-[2rem_minmax(0,1fr)] lg:gap-6"
                         >
                             <div className="hidden lg:flex">
-                                <span className="mt-5 h-4 w-4 rounded-full border-4 border-[var(--color-surface)] bg-[var(--color-primary)] shadow-[0_0_0_1px_var(--color-line)]" />
+                                <span
+                                    aria-hidden="true"
+                                    className="mt-5 h-4 w-4 rounded-full border-4 border-[var(--color-surface)] bg-[var(--color-primary)] shadow-[0_0_0_1px_var(--color-line)]"
+                                />
                             </div>
                             <div className="space-y-5">
                                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">

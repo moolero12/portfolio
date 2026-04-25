@@ -6,11 +6,13 @@ export function EducationList() {
     return (
         <Section
             id="formacion"
+            labelledBy="formacion-heading"
             className="border-y border-[var(--color-line)] bg-[rgba(18,26,34,0.35)]"
         >
             <div className="space-y-12">
                 <SectionHeading
                     eyebrow="Formación"
+                    headingId="formacion-heading"
                     title="Un recorrido académico continuo dentro del área tecnológica."
                     description="La formación refleja una evolución coherente: desde sistemas y soporte hasta desarrollo web y multiplataforma."
                 />

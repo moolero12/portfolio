@@ -52,6 +52,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                     <CardContent className="pt-0">
                         <a
                             href={project.href}
+                            aria-label={`Ver ${project.name} en una nueva pestaña`}
                             target="_blank"
                             rel="noreferrer"
                             className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] transition duration-200 hover:gap-3"

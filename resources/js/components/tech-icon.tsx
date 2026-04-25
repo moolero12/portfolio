@@ -26,7 +26,6 @@ import {
     SiTailwindcss,
     SiTypescript,
     SiUbuntu,
-
 } from 'react-icons/si';
 
 const techIcons: Record<string, ComponentType<IconBaseProps>> = {
@@ -67,7 +66,9 @@ type TechIconProps = {
 export function TechIcon({ name, size = 14, className }: TechIconProps) {
     const Icon = techIcons[name];
 
-    if (!Icon) return null;
+    if (!Icon) {
+        return null;
+    }
 
     return <Icon size={size} className={className} />;
 }

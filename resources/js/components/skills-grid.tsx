@@ -1,6 +1,5 @@
 import { Section } from '@/components/section';
 import { SectionHeading } from '@/components/section-heading';
-import { TechIcon } from '@/components/tech-icon';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { skillGroups } from '@/data/portfolio';
@@ -9,11 +8,13 @@ export function SkillsGrid() {
     return (
         <Section
             id="habilidades"
+            labelledBy="habilidades-heading"
             className="border-y border-[var(--color-line)] bg-[rgba(18,26,34,0.35)]"
         >
             <div className="space-y-12">
                 <SectionHeading
                     eyebrow="Habilidades"
+                    headingId="habilidades-heading"
                     title="Tecnologías y herramientas con las que ya trabajo."
                     description="He evitado barras o porcentajes artificiales. Prefiero mostrar con claridad el stack que uso, el entorno en el que he trabajado y la base técnica que aporta valor al perfil."
                 />
@@ -30,10 +31,6 @@ export function SkillsGrid() {
                             <CardContent className="flex flex-wrap gap-2.5 pt-0">
                                 {group.items.map((item) => (
                                     <Badge key={item} variant="secondary">
-                                        <TechIcon
-                                            name={item}
-                                            className="shrink-0 text-[var(--color-muted)]"
-                                        />
                                         {item}
                                     </Badge>
                                 ))}

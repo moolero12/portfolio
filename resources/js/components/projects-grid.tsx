@@ -8,10 +8,11 @@ export function ProjectsGrid() {
     const secondaryProjects = projects.filter((project) => !project.featured);
 
     return (
-        <Section id="proyectos">
+        <Section id="proyectos" labelledBy="proyectos-heading">
             <div className="space-y-12">
                 <SectionHeading
                     eyebrow="Proyectos"
+                    headingId="proyectos-heading"
                     title="Proyectos que reflejan iniciativa, criterio técnico y ganas de construir."
                     description="La selección es breve y honesta. La idea es mostrar trabajos que explican bien el perfil y dejan claro el tipo de problemas que me interesa resolver."
                 />

@@ -5,10 +5,15 @@ import { contactLinks } from '@/data/portfolio';
 
 export function ContactSection() {
     return (
-        <Section id="contacto" className="border-t border-[var(--color-line)]">
+        <Section
+            id="contacto"
+            labelledBy="contacto-heading"
+            className="border-t border-[var(--color-line)]"
+        >
             <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(18rem,1.05fr)] lg:items-start">
                 <SectionHeading
                     eyebrow="Contacto"
+                    headingId="contacto-heading"
                     title="Abierto a nuevas oportunidades y proyectos con sentido."
                     description="Si quieres hablar sobre una oportunidad junior, una colaboración o simplemente conocer mejor mi trabajo, este portfolio está pensado para que sea fácil dar el siguiente paso."
                 >
@@ -45,6 +50,7 @@ export function ContactSection() {
                             <a
                                 key={item.label}
                                 href={item.href}
+                                aria-label={`${item.label}: ${item.value}`}
                                 target={
                                     item.href.startsWith('mailto:')
                                         ? undefined

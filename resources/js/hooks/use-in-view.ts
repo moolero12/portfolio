@@ -16,13 +16,19 @@ export function useInView({
 
     useEffect(() => {
         const node = ref.current;
-        if (!node) return;
+
+        if (!node) {
+            return;
+        }
 
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setIsInView(true);
-                    if (once) observer.unobserve(node);
+
+                    if (once) {
+                        observer.unobserve(node);
+                    }
                 } else if (!once) {
                     setIsInView(false);
                 }

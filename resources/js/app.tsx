@@ -20,7 +20,15 @@ void createInertiaApp({
         return page().then((module) => module.default);
     },
     setup({ el, App, props }) {
-        createRoot(el).render(<App {...props} />);
+        const app = <App {...props} />;
+
+        if (el) {
+            createRoot(el).render(app);
+
+            return;
+        }
+
+        return app;
     },
     progress: {
         color: '#1f5b57',

@@ -4,12 +4,14 @@ type SectionHeadingProps = PropsWithChildren<{
     eyebrow: string;
     title: string;
     description: string;
+    headingId?: string;
 }>;
 
 export function SectionHeading({
     eyebrow,
     title,
     description,
+    headingId,
     children,
 }: SectionHeadingProps) {
     return (
@@ -18,7 +20,10 @@ export function SectionHeading({
                 {eyebrow}
             </span>
             <div className="space-y-4">
-                <h2 className="font-serif text-3xl text-balance text-[var(--color-text)] sm:text-4xl">
+                <h2
+                    id={headingId}
+                    className="font-serif text-3xl text-balance text-[var(--color-text)] sm:text-4xl"
+                >
                     {title}
                 </h2>
                 <p className="max-w-2xl text-base leading-7 text-[var(--color-muted)] sm:text-lg">

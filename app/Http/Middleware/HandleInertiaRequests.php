@@ -38,6 +38,20 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'name' => config('app.name'),
+            'seo' => [
+                'siteName' => config('seo.site_name'),
+                'siteUrl' => config('seo.site_url'),
+                'titleSeparator' => config('seo.title_separator'),
+                'defaultTitle' => config('seo.default_title'),
+                'defaultDescription' => config('seo.default_description'),
+                'defaultRobots' => config('seo.default_robots'),
+                'defaultType' => config('seo.default_type'),
+                'defaultImage' => config('seo.default_image'),
+                'defaultImageAlt' => config('seo.default_image_alt'),
+                'twitterCard' => config('seo.twitter_card'),
+                'locale' => config('seo.locale'),
+                'author' => config('seo.author'),
+            ],
             'auth' => [
                 'user' => $request->user(),
             ],
