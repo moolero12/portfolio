@@ -3,9 +3,12 @@
 namespace App\Providers;
 
 use Carbon\CarbonImmutable;
+use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
 
 class AppServiceProvider extends ServiceProvider
@@ -32,6 +35,14 @@ class AppServiceProvider extends ServiceProvider
     protected function configureDefaults(): void
     {
         Date::use(CarbonImmutable::class);
+
+        RateLimiter::for('portfolio', function (Request $request): Limit {
+            return Limit::perMinute((int) env('WEB_RATE_LIMIT_MAX_REQUESTS', 90))
+                ->by($request->ip())
+                ->response(function () {
+                    return response()->view('errors.too-many-requests', status: 429);
+                });
+        });
 
         DB::prohibitDestructiveCommands(
             app()->isProduction(),
