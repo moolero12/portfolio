@@ -7,10 +7,10 @@ export function Hero() {
         <section
             id="inicio"
             aria-labelledby="inicio-heading"
-            className="relative overflow-hidden border-b border-[var(--color-line)]"
+            className="relative isolate overflow-hidden border-b border-[var(--color-line)]"
         >
-            <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,_rgba(104,183,173,0.18),_transparent_42%),radial-gradient(circle_at_top_right,_rgba(215,150,101,0.14),_transparent_30%)]" />
-            <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl items-center gap-14 px-6 py-16 sm:px-8 md:py-24 lg:grid-cols-[minmax(0,1.25fr)_minmax(20rem,0.85fr)] lg:px-10">
+            <div className="absolute inset-x-0 top-0 z-0 h-[42rem] bg-[radial-gradient(ellipse_at_18%_28%,_rgba(104,183,173,0.07),_transparent_54%),radial-gradient(ellipse_at_72%_20%,_rgba(215,150,101,0.05),_transparent_38%)]" />
+            <div className="relative z-10 mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl items-center gap-14 px-6 py-16 sm:px-8 md:py-24 lg:grid-cols-[minmax(0,1.25fr)_minmax(20rem,0.85fr)] lg:px-10">
                 <div className="space-y-8">
                     <div className="space-y-5">
                         <span className="inline-flex rounded-full border border-[var(--color-line)] bg-[var(--color-surface-strong)] px-4 py-1.5 text-[0.72rem] font-semibold tracking-[0.24em] text-[var(--color-primary)] uppercase">
@@ -84,7 +84,7 @@ export function Hero() {
                 </div>
 
                 <div className="relative" aria-label="Resumen profesional">
-                    <div className="absolute inset-0 rounded-[2rem] bg-[linear-gradient(135deg,rgba(104,183,173,0.18),rgba(215,150,101,0.08))] blur-2xl" />
+                    <div className="absolute inset-0 rounded-[2rem] bg-[linear-gradient(135deg,rgba(104,183,173,0.08),rgba(215,150,101,0.04))] blur-2xl" />
                     <div className="relative overflow-hidden rounded-[2rem] border border-[var(--color-line)] bg-[linear-gradient(180deg,rgba(18,26,34,0.98),rgba(12,17,23,0.94))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.32)] sm:p-8">
                         <div className="mb-8 flex items-center justify-between">
                             <div>
