@@ -29,6 +29,11 @@ export function EducationList() {
                             <h3 className="mt-3 text-xl font-semibold text-[var(--color-text)]">
                                 {item.title}
                             </h3>
+                            {item.company ? (
+                                <p className="mt-2 text-sm font-semibold text-[var(--color-primary)]">
+                                    {item.company}
+                                </p>
+                            ) : null}
                             <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
                                 {item.description}
                             </p>

@@ -15,10 +15,10 @@ export function ContactSection() {
                 <SectionHeading
                     eyebrow="Contacto"
                     headingId="contacto-heading"
-                    title="Abierto a nuevas oportunidades y proyectos con sentido."
-                    description="Si quieres hablar sobre una oportunidad junior, una colaboración o simplemente conocer mejor mi trabajo, este portfolio está pensado para que sea fácil dar el siguiente paso."
+                    title="Buscando empleo y abierto a nuevas oportunidades."
+                    description="Si quieres hablar sobre una vacante junior, una colaboración o simplemente conocer mejor mi trabajo, este portfolio está pensado para que sea fácil dar el siguiente paso."
                 >
-                    <div className="pt-2">
+                    <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
                         <Button asChild size="lg">
                             <a
                                 href="mailto:diegomolero97@gmail.com"
@@ -32,6 +32,21 @@ export function ContactSection() {
                                 }
                             >
                                 Escribirme por email
+                            </a>
+                        </Button>
+                        <Button asChild variant="secondary" size="lg">
+                            <a
+                                href="/CV/CV-Diego-Molero-Menendez.pdf"
+                                download
+                                onClick={() =>
+                                    trackPlausibleEvent('Download CV', {
+                                        props: {
+                                            location: 'contact-section',
+                                        },
+                                    })
+                                }
+                            >
+                                Descargar CV
                             </a>
                         </Button>
                     </div>

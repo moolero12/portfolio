@@ -51,43 +51,42 @@ export const profile = {
     role: 'Desarrollador Full Stack Junior',
     tagline:
         'Laravel, React e Inertia.js para construir productos claros, útiles y mantenibles.',
-    intro: 'Desarrollador web y multiplataforma junior con experiencia real en entornos corporativos, aplicaciones híbridas y soporte IT.',
+    intro: 'Desarrollador web y multiplataforma junior con experiencia profesional en desarrollo web corporativo, aplicaciones híbridas y soporte IT.',
     summary:
-        'Actualmente participo en el desarrollo full stack de una intranet corporativa en Solarig para distintas áreas de negocio, combinando producto, mantenimiento evolutivo y mejora continua.',
+        'He participado en el desarrollo full stack de la intranet corporativa de Solarig, colaborando con áreas como RRHH, HSEQ e IT en herramientas internas orientadas a negocio. Actualmente estoy en búsqueda activa de una nueva oportunidad profesional.',
     focus: [
-        'Experiencia real con Laravel, PHP, JavaScript, TypeScript y React.',
-        'Base técnica amplia que une desarrollo web, sistemas y despliegue.',
-        'Perfil junior serio, versátil y con orientación a resolver problemas útiles.',
+        'Experiencia real con Laravel, PHP, JavaScript, TypeScript, React e Inertia.js.',
+        'Base técnica amplia que une desarrollo web, sistemas, soporte IT y despliegue.',
+        'Perfil junior serio, versátil y orientado a producto, mantenimiento evolutivo y resolución de incidencias.',
     ],
 };
 
 export const heroStats = [
     { label: 'Ubicación', value: 'Soria, España' },
     { label: 'Stack base', value: 'Laravel, React, Inertia.js' },
-    { label: 'Enfoque', value: 'Producto, intranet y apps híbridas' },
+    { label: 'Situación actual', value: 'Buscando empleo' },
 ];
 
 export const skillGroups: SkillGroup[] = [
     {
-        title: 'Backend',
+        title: 'Backend y lenguajes',
         description:
-            'Tecnologías con las que desarrollo lógica de negocio, APIs y paneles.',
+            'Lenguajes y tecnologías con las que desarrollo lógica de negocio, APIs y soluciones conectadas a datos.',
         items: [
             'PHP',
             'Laravel',
             'APIs',
             'SQL',
-            'MySQL',
-            'PostgreSQL',
-            'MariaDB',
-            'MongoDB',
-            'Firebase',
+            'PL/SQL',
+            'Java',
+            'Python',
+            'C/C++',
         ],
     },
     {
-        title: 'Frontend',
+        title: 'Frontend y aplicaciones',
         description:
-            'Interfaz, experiencia de uso y aplicaciones web modernas.',
+            'Interfaz, experiencia de uso y aplicaciones web o híbridas modernas.',
         items: [
             'JavaScript',
             'TypeScript',
@@ -96,31 +95,41 @@ export const skillGroups: SkillGroup[] = [
             'HTML5',
             'CSS3',
             'Tailwind CSS',
+            'Capacitor',
+            'JavaFX',
+            'Node.js',
         ],
     },
     {
-        title: 'Herramientas',
+        title: 'Bases de datos y herramientas',
         description:
-            'Flujo de trabajo diario para desarrollar, probar y colaborar.',
+            'Trabajo diario con datos, control de versiones, pruebas, despliegues y depuración.',
         items: [
+            'MySQL',
+            'PostgreSQL',
+            'SQL Server',
+            'MariaDB',
+            'MongoDB',
+            'Firebase',
             'Git',
             'GitHub',
             'GitLab',
             'Postman',
             'Docker',
-            'Node.js',
             'Testing',
             'Debugging',
             'CI/CD básico',
         ],
     },
     {
-        title: 'Sistemas e infraestructura',
-        description: 'Conocimientos que refuerzan una base técnica versátil.',
+        title: 'Sistemas, soporte e infraestructura',
+        description:
+            'Conocimientos de sistemas que refuerzan una base técnica versátil y práctica.',
         items: [
             'Linux',
             'Windows',
             'Windows Server',
+            'Ubuntu',
             'Ubuntu Server',
             'Active Directory',
             'DNS',
@@ -128,6 +137,10 @@ export const skillGroups: SkillGroup[] = [
             'GPOs',
             'SharePoint',
             'Intune',
+            'Backups',
+            'Servicios en red',
+            'Soporte técnico',
+            'Inventario',
         ],
     },
 ];
@@ -136,49 +149,69 @@ export const experienceItems: TimelineItem[] = [
     {
         title: 'Desarrollador de aplicaciones web / multiplataforma',
         company: 'Solarig Global Services S.A.',
-        period: '2026 - Actualidad',
+        period: 'Feb. 2026 - Jun. 2026',
         description:
-            'Participación en el desarrollo full stack de una intranet corporativa para distintas áreas de negocio.',
+            'Prácticas profesionales de desarrollo full stack sobre la intranet corporativa de Solarig, dando soporte a áreas como RRHH, HSEQ e IT.',
         highlights: [
-            'Trabajo con PHP, Laravel, JavaScript, Git, Linux y MariaDB en un entorno profesional real.',
-            'Desarrollo y mantenimiento de módulos internos, panel de administración y mejoras funcionales.',
-            'Implementación de permisos por rol e integración de nuevas necesidades del negocio.',
+            'Desarrollo full stack con PHP, Laravel, JavaScript, APIs, Git, Linux y MariaDB en un entorno profesional real.',
+            'Diseño e implementación de un panel de administración con control de permisos por usuario, mejorando la seguridad y el acceso por rol.',
+            'Desarrollo y mantenimiento de vistas y módulos principales de la intranet, unificando flujos internos para distintas áreas.',
+            'Actualización progresiva de la aplicación entre versiones de Laravel, cuidando compatibilidad, mantenimiento y continuidad del servicio.',
+            'Integración de APIs y mejoras funcionales que agilizaron procesos internos y redujeron incidencias funcionales en torno a un 20% en operaciones recurrentes.',
+        ],
+    },
+    {
+        title: 'Administrador de sistemas de TI',
+        company: 'Solarig Global Services S.A.',
+        period: 'Jul. 2025 - Sep. 2025',
+        description:
+            'Prácticas centradas en infraestructura Microsoft, soporte técnico, gestión documental y administración de dispositivos corporativos.',
+        highlights: [
+            'Instalación, configuración y mantenimiento de Windows Server, DNS, DHCP, GPOs y entorno Active Directory.',
+            'Administración de SharePoint para gestión documental centralizada y apoyo a flujos de trabajo internos.',
+            'Gestión de dispositivos mediante Intune / Endpoint Manager, desplegando políticas de seguridad y controlando inventario.',
+            'Supervisión de copias de seguridad y apoyo en planes de recuperación ante desastres.',
+            'Soporte integral de hardware y software, gestión de tickets y creación de documentación técnica y guías de usuario.',
         ],
     },
     {
         title: 'Desarrollador de aplicaciones web',
         company: 'Codesian Software Tech S.L.',
-        period: '2025',
+        period: 'Feb. 2025 - May. 2025',
         description:
-            'Participación en el desarrollo de aplicaciones híbridas y soluciones conectadas a servicios externos.',
+            'Participación en el desarrollo de aplicaciones híbridas completas y soluciones conectadas a servicios externos.',
         highlights: [
             'Trabajo con PHP, JavaScript, CSS, Node.js, Capacitor, Firebase y PostgreSQL.',
-            'Contacto con desarrollo orientado a multiplataforma y estructura de proyecto más allá de la web tradicional.',
-            'Experiencia en integración técnica y evolutivos sobre productos en marcha.',
+            'Implementación de funcionalidades orientadas a negocio, incluyendo una solución de gestión de incidencias clasificadas por zonas geolocalizadas.',
+            'Colaboración en frontend, lógica de aplicación, conexión con base de datos y resolución de errores dentro del ciclo de desarrollo.',
+            'Contribución a la mejora de usabilidad y estabilidad, reduciendo tiempos de registro y seguimiento de incidencias en torno a un 15%.',
         ],
     },
     {
-        title: 'Administración de sistemas TIC',
+        title: 'Administrador de sistemas TIC',
         company: 'Solarig Global Services S.A.',
-        period: '2023',
+        period: 'Mar. 2023 - Jun. 2023',
         description:
             'Etapa centrada en sistemas, soporte y servicios corporativos, con enfoque práctico y operativo.',
         highlights: [
-            'Trabajo con Windows Server, Active Directory, SharePoint, Intune, DNS, DHCP y GPOs.',
-            'Soporte técnico y gestión de infraestructura para entorno empresarial.',
-            'Base sólida en sistemas que hoy refuerza mi manera de desarrollar y desplegar.',
+            'Instalación, configuración y mantenimiento de entornos Microsoft, incluyendo Windows Server, DNS, DHCP, GPOs y Active Directory.',
+            'Administración de SharePoint para gestión documental centralizada y soporte a flujos de trabajo internos.',
+            'Gestión de dispositivos mediante Intune / Endpoint Manager, aplicando políticas de seguridad, inventario y despliegue de configuraciones.',
+            'Supervisión de backups y apoyo a planes de recuperación ante desastres.',
+            'Soporte técnico a una media de 10-15 usuarios al día en incidencias de hardware, software, permisos, red, impresoras, correo y recursos corporativos.',
         ],
     },
     {
-        title: 'Soporte técnico y mantenimiento',
+        title: 'Técnico de reparación de equipos de hardware',
         company: 'ActivA Soft',
-        period: '2021',
+        period: 'Abr. 2021 - Jun. 2021',
         description:
-            'Primer contacto profesional con hardware, sistemas operativos y redes.',
+            'Primer contacto profesional con diagnóstico, reparación, montaje y puesta a punto de equipos informáticos.',
         highlights: [
-            'Reparación y mantenimiento de equipos.',
-            'Resolución de incidencias básicas de sistemas y red.',
-            'Aprendizaje práctico orientado a soporte y atención técnica.',
+            'Diagnóstico, reparación, montaje y mantenimiento de equipos para entornos internos y clientes externos.',
+            'Instalación de sistemas operativos, configuración de red, cableado básico y sustitución de componentes hardware.',
+            'Apoyo en administración de redes, conectividad y mantenimiento preventivo/correctivo de equipos y periféricos.',
+            'Atención técnica a clientes y necesidades internas, mejorando tiempos de respuesta y disponibilidad de equipos.',
         ],
     },
 ];
@@ -186,30 +219,34 @@ export const experienceItems: TimelineItem[] = [
 export const educationItems: TimelineItem[] = [
     {
         title: 'CFGS Desarrollo de Aplicaciones Multiplataforma',
-        period: '2025 - 2026',
+        company: 'IES Virgen del Espino',
+        period: 'Sep. 2025 - Jun. 2026',
         description:
-            'Continuidad del perfil técnico con foco en aplicaciones y entornos multiplataforma.',
+            'Formación orientada a aplicaciones multiplataforma, Java, JavaFX, bases de datos y desarrollo de software.',
         highlights: [],
     },
     {
         title: 'CFGS Desarrollo de Aplicaciones Web',
-        period: '2023 - 2025',
+        company: 'IES Virgen del Espino',
+        period: 'Sep. 2023 - Jun. 2025',
         description:
-            'Base principal de desarrollo web, backend, frontend y bases de datos.',
+            'Base principal de desarrollo web, backend, frontend, bases de datos y despliegue de aplicaciones.',
         highlights: [],
     },
     {
         title: 'CFGM Sistemas Microinformáticos y Redes',
-        period: '2021 - 2023',
+        company: 'IES Virgen del Espino',
+        period: 'Sep. 2021 - Jun. 2023',
         description:
-            'Formación orientada a sistemas, mantenimiento, redes y soporte técnico.',
+            'Formación orientada a sistemas, mantenimiento, redes, soporte técnico e infraestructura.',
         highlights: [],
     },
     {
-        title: 'FP Básica en Informática de Oficina',
-        period: '2019 - 2021',
+        title: 'Formación Profesional Básica en Informática de Oficina',
+        company: 'IES Virgen del Espino',
+        period: 'Sep. 2019 - Jun. 2021',
         description:
-            'Inicio del recorrido formativo dentro del ámbito tecnológico.',
+            'Inicio del recorrido formativo dentro del ámbito tecnológico e informático.',
         highlights: [],
     },
 ];
@@ -220,7 +257,7 @@ export const projects: Project[] = [
         summary:
             'Plataforma web para montar PCs por piezas con validación técnica y cálculos orientados al usuario.',
         description:
-            'Proyecto web centrado en ayudar a configurar equipos por componentes, validar compatibilidades entre piezas y calcular cuellos de botella entre CPU y GPU de forma clara y útil.',
+            'Proyecto de fin de grado en DAW desarrollado de forma integral: arquitectura, backend, frontend, base de datos, lógica de compatibilidad, consumo de APIs y despliegue.',
         stack: [
             'PHP',
             'Laravel',
@@ -228,6 +265,8 @@ export const projects: Project[] = [
             'Inertia.js',
             'TypeScript',
             'MySQL',
+            'HTML',
+            'CSS',
             'Tailwind CSS',
             'APIs',
         ],
@@ -243,7 +282,7 @@ export const projects: Project[] = [
         summary:
             'Versión de escritorio del proyecto, enfocada a entorno desktop y arquitectura individual.',
         description:
-            'Adaptación del concepto de mbuilder a una aplicación de escritorio desarrollada con Java y JavaFX, conectada a base de datos y APIs.',
+            'Proyecto de fin de grado en DAM desarrollado íntegramente de forma individual, con interfaz JavaFX, conexión a MySQL, APIs externas y pruebas funcionales.',
         stack: ['Java', 'JavaFX', 'MySQL', 'APIs', 'CSS'],
         imageSrc: '/mbuilder-desktop.png',
         imageAlt:
@@ -257,6 +296,7 @@ export const contactLinks: ContactLink[] = [
         label: 'Email',
         value: 'diegomolero97@gmail.com',
         href: 'mailto:diegomolero97@gmail.com',
+        note: 'Disponible para nuevas oportunidades laborales.',
     },
     {
         label: 'GitHub',

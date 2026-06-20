@@ -14,7 +14,7 @@ export function Hero() {
                 <div className="space-y-8">
                     <div className="space-y-5">
                         <span className="inline-flex rounded-full border border-[var(--color-line)] bg-[var(--color-surface-strong)] px-4 py-1.5 text-[0.72rem] font-semibold tracking-[0.24em] text-[var(--color-primary)] uppercase">
-                            Disponible para seguir creciendo
+                            Buscando una nueva oportunidad
                         </span>
                         <div className="space-y-4">
                             <p className="text-sm tracking-[0.28em] text-[var(--color-muted)] uppercase">
@@ -43,7 +43,7 @@ export function Hero() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col gap-4 sm:flex-row">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                         <Button asChild size="lg">
                             <a
                                 href="#proyectos"
@@ -52,6 +52,17 @@ export function Hero() {
                                 }
                             >
                                 Ver proyectos destacados
+                            </a>
+                        </Button>
+                        <Button asChild variant="secondary" size="lg">
+                            <a
+                                href="/CV/CV-Diego-Molero-Menendez.pdf"
+                                download
+                                onClick={() =>
+                                    trackPlausibleEvent('Download CV')
+                                }
+                            >
+                                Descargar CV
                             </a>
                         </Button>
                         <Button asChild variant="secondary" size="lg">

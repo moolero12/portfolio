@@ -35,7 +35,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                                 height={720}
                                 onError={() => setHasPreview(false)}
                                 className={cn(
-                                    'h-52 w-full object-cover object-top transition duration-500 group-hover:scale-[1.015]',
+                                    'h-52 w-full object-cover object-top',
                                     project.featured && 'md:h-72',
                                 )}
                             />
