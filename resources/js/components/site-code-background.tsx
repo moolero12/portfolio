@@ -2,6 +2,12 @@ import { useEffect, useRef } from 'react';
 
 type Segment = [number, number, number, number];
 
+type NavigatorWithConnection = Navigator & {
+    connection?: {
+        saveData?: boolean;
+    };
+};
+
 const GLYPHS: Segment[][] = [
     [
         [-0.34, 0, 0.02, 0.34],
@@ -97,145 +103,177 @@ export function SiteCodeBackground() {
         const container = containerRef.current;
         let cleanup = () => {};
         let cancelled = false;
+        let idleId: number | null = null;
 
         if (!container) {
             return cleanup;
         }
 
-        void import('three').then(
-            ({
-                AdditiveBlending,
-                BufferAttribute,
-                BufferGeometry,
-                Color,
-                LineBasicMaterial,
-                LineSegments,
-                OrthographicCamera,
-                Points,
-                PointsMaterial,
-                Scene,
-                Vector2,
-                WebGLRenderer,
-            }) => {
-                if (cancelled) {
-                    return;
-                }
+        const canRunBackground =
+            window.matchMedia('(min-width: 900px)').matches &&
+            !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+            !(navigator as NavigatorWithConnection).connection?.saveData;
 
-                const prefersReducedMotion = window.matchMedia(
-                    '(prefers-reduced-motion: reduce)',
-                ).matches;
-                const pointer = new Vector2(0, 0);
-                const scene = new Scene();
-                const camera = new OrthographicCamera(-7, 7, 4, -4, 0.1, 30);
-                const { lines, points } = createCodeField();
-                const lineGeometry = new BufferGeometry();
-                const pointGeometry = new BufferGeometry();
-                const renderer = new WebGLRenderer({
-                    alpha: true,
-                    antialias: true,
-                    powerPreference: 'high-performance',
-                });
-                const lineMaterial = new LineBasicMaterial({
-                    color: new Color('#68b7ad'),
-                    transparent: true,
-                    opacity: 0.12,
-                    blending: AdditiveBlending,
-                });
-                const pointMaterial = new PointsMaterial({
-                    color: new Color('#d79665'),
-                    size: 0.035,
-                    sizeAttenuation: true,
-                    transparent: true,
-                    opacity: 0.24,
-                    blending: AdditiveBlending,
-                });
-                const lineMesh = new LineSegments(lineGeometry, lineMaterial);
-                const pointMesh = new Points(pointGeometry, pointMaterial);
-                let animationFrame = 0;
+        if (!canRunBackground) {
+            return cleanup;
+        }
 
-                lineGeometry.setAttribute(
-                    'position',
-                    new BufferAttribute(lines, 3),
-                );
-                pointGeometry.setAttribute(
-                    'position',
-                    new BufferAttribute(points, 3),
-                );
-
-                camera.position.set(0, 0, 10);
-                scene.add(lineMesh, pointMesh);
-
-                renderer.domElement.style.display = 'block';
-                renderer.domElement.style.width = '100%';
-                renderer.domElement.style.height = '100%';
-                renderer.setClearAlpha(0);
-                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-                container.appendChild(renderer.domElement);
-
-                const resize = () => {
-                    const { width, height } = container.getBoundingClientRect();
-                    const aspect = width / Math.max(height, 1);
-                    const viewHeight = 7.2;
-                    const viewWidth = viewHeight * aspect;
-
-                    camera.left = -viewWidth / 2;
-                    camera.right = viewWidth / 2;
-                    camera.top = viewHeight / 2;
-                    camera.bottom = -viewHeight / 2;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(width, height, false);
-                };
-
-                const resizeObserver = new ResizeObserver(resize);
-                resizeObserver.observe(container);
-                resize();
-
-                const handlePointerMove = (event: PointerEvent) => {
-                    pointer.x = (event.clientX / window.innerWidth - 0.5) * 2;
-                    pointer.y = -(event.clientY / window.innerHeight - 0.5) * 2;
-                };
-
-                window.addEventListener('pointermove', handlePointerMove, {
-                    passive: true,
-                });
-
-                const render = (time = 0) => {
-                    const progress = time * 0.00008;
-
-                    lineMesh.rotation.z = Math.sin(progress) * 0.008;
-                    pointMesh.rotation.z = lineMesh.rotation.z;
-                    scene.position.x = pointer.x * 0.035;
-                    scene.position.y =
-                        pointer.y * 0.025 + Math.sin(progress) * 0.025;
-
-                    renderer.render(scene, camera);
-
-                    if (!prefersReducedMotion) {
-                        animationFrame = window.requestAnimationFrame(render);
+        const loadScene = () =>
+            void import('three').then(
+                ({
+                    AdditiveBlending,
+                    BufferAttribute,
+                    BufferGeometry,
+                    Color,
+                    LineBasicMaterial,
+                    LineSegments,
+                    OrthographicCamera,
+                    Points,
+                    PointsMaterial,
+                    Scene,
+                    Vector2,
+                    WebGLRenderer,
+                }) => {
+                    if (cancelled) {
+                        return;
                     }
-                };
 
-                render();
-
-                cleanup = () => {
-                    window.cancelAnimationFrame(animationFrame);
-                    window.removeEventListener(
-                        'pointermove',
-                        handlePointerMove,
+                    const pointer = new Vector2(0, 0);
+                    const scene = new Scene();
+                    const camera = new OrthographicCamera(
+                        -7,
+                        7,
+                        4,
+                        -4,
+                        0.1,
+                        30,
                     );
-                    resizeObserver.disconnect();
-                    lineGeometry.dispose();
-                    pointGeometry.dispose();
-                    lineMaterial.dispose();
-                    pointMaterial.dispose();
-                    renderer.dispose();
-                    renderer.domElement.remove();
-                };
-            },
-        );
+                    const { lines, points } = createCodeField();
+                    const lineGeometry = new BufferGeometry();
+                    const pointGeometry = new BufferGeometry();
+                    const renderer = new WebGLRenderer({
+                        alpha: true,
+                        antialias: true,
+                        powerPreference: 'high-performance',
+                    });
+                    const lineMaterial = new LineBasicMaterial({
+                        color: new Color('#68b7ad'),
+                        transparent: true,
+                        opacity: 0.12,
+                        blending: AdditiveBlending,
+                    });
+                    const pointMaterial = new PointsMaterial({
+                        color: new Color('#d79665'),
+                        size: 0.035,
+                        sizeAttenuation: true,
+                        transparent: true,
+                        opacity: 0.24,
+                        blending: AdditiveBlending,
+                    });
+                    const lineMesh = new LineSegments(
+                        lineGeometry,
+                        lineMaterial,
+                    );
+                    const pointMesh = new Points(pointGeometry, pointMaterial);
+                    let animationFrame = 0;
+
+                    lineGeometry.setAttribute(
+                        'position',
+                        new BufferAttribute(lines, 3),
+                    );
+                    pointGeometry.setAttribute(
+                        'position',
+                        new BufferAttribute(points, 3),
+                    );
+
+                    camera.position.set(0, 0, 10);
+                    scene.add(lineMesh, pointMesh);
+
+                    renderer.domElement.style.display = 'block';
+                    renderer.domElement.style.width = '100%';
+                    renderer.domElement.style.height = '100%';
+                    renderer.setClearAlpha(0);
+                    renderer.setPixelRatio(
+                        Math.min(window.devicePixelRatio, 1.5),
+                    );
+                    container.appendChild(renderer.domElement);
+
+                    const resize = () => {
+                        const { width, height } =
+                            container.getBoundingClientRect();
+                        const aspect = width / Math.max(height, 1);
+                        const viewHeight = 7.2;
+                        const viewWidth = viewHeight * aspect;
+
+                        camera.left = -viewWidth / 2;
+                        camera.right = viewWidth / 2;
+                        camera.top = viewHeight / 2;
+                        camera.bottom = -viewHeight / 2;
+                        camera.updateProjectionMatrix();
+                        renderer.setSize(width, height, false);
+                    };
+
+                    const resizeObserver = new ResizeObserver(resize);
+                    resizeObserver.observe(container);
+                    resize();
+
+                    const handlePointerMove = (event: PointerEvent) => {
+                        pointer.x =
+                            (event.clientX / window.innerWidth - 0.5) * 2;
+                        pointer.y =
+                            -(event.clientY / window.innerHeight - 0.5) * 2;
+                    };
+
+                    window.addEventListener('pointermove', handlePointerMove, {
+                        passive: true,
+                    });
+
+                    const render = (time = 0) => {
+                        const progress = time * 0.00008;
+
+                        lineMesh.rotation.z = Math.sin(progress) * 0.008;
+                        pointMesh.rotation.z = lineMesh.rotation.z;
+                        scene.position.x = pointer.x * 0.035;
+                        scene.position.y =
+                            pointer.y * 0.025 + Math.sin(progress) * 0.025;
+
+                        renderer.render(scene, camera);
+
+                        animationFrame = window.requestAnimationFrame(render);
+                    };
+
+                    render();
+
+                    cleanup = () => {
+                        window.cancelAnimationFrame(animationFrame);
+                        window.removeEventListener(
+                            'pointermove',
+                            handlePointerMove,
+                        );
+                        resizeObserver.disconnect();
+                        lineGeometry.dispose();
+                        pointGeometry.dispose();
+                        lineMaterial.dispose();
+                        pointMaterial.dispose();
+                        renderer.dispose();
+                        renderer.domElement.remove();
+                    };
+                },
+            );
+
+        if ('requestIdleCallback' in window) {
+            idleId = window.requestIdleCallback(loadScene, { timeout: 1800 });
+        } else {
+            globalThis.setTimeout(loadScene, 700);
+        }
 
         return () => {
             cancelled = true;
+
+            if (idleId !== null && 'cancelIdleCallback' in window) {
+                window.cancelIdleCallback(idleId);
+            }
+
             cleanup();
         };
     }, []);

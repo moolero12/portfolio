@@ -3,11 +3,15 @@ import { heroStats, profile } from '@/data/portfolio';
 import { trackPlausibleEvent } from '@/lib/plausible';
 
 export function Hero() {
+    // La línea decorativa se pausa con el foco para evitar que parezca un cursor activo tras hacer click.
+    const caretClassName =
+        'mb-2 ml-2 inline-block h-[1.18em] w-[2px] translate-y-0.5 bg-[var(--color-primary)] align-middle opacity-80 motion-safe:animate-[blink-caret_1.15s_step-end_infinite] group-focus-within:animate-none group-active:animate-none';
+
     return (
         <section
             id="inicio"
             aria-labelledby="inicio-heading"
-            className="relative isolate overflow-hidden border-b border-[var(--color-line)]"
+            className="group relative isolate overflow-hidden border-b border-[var(--color-line)]"
         >
             <div className="absolute inset-x-0 top-0 z-0 h-[42rem] bg-[radial-gradient(ellipse_at_18%_28%,_rgba(104,183,173,0.07),_transparent_54%),radial-gradient(ellipse_at_72%_20%,_rgba(215,150,101,0.05),_transparent_38%)]" />
             <div className="relative z-10 mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl items-center gap-14 px-6 py-16 sm:px-8 md:py-24 lg:grid-cols-[minmax(0,1.25fr)_minmax(20rem,0.85fr)] lg:px-10">
@@ -34,11 +38,7 @@ export function Hero() {
                             {profile.intro} {profile.summary}
                             <span
                                 aria-hidden="true"
-                                className="mb-2 ml-2 inline-block h-[1.18em] w-[2px] translate-y-0.5 bg-[var(--color-primary)] align-middle opacity-80"
-                                style={{
-                                    animation:
-                                        'blink-caret 1.15s step-end infinite',
-                                }}
+                                className={caretClassName}
                             />
                         </p>
                     </div>

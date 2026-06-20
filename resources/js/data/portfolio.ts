@@ -53,7 +53,7 @@ export const profile = {
         'Laravel, React e Inertia.js para construir productos claros, útiles y mantenibles.',
     intro: 'Desarrollador web y multiplataforma junior con experiencia profesional en desarrollo web corporativo, aplicaciones híbridas y soporte IT.',
     summary:
-        'He participado en el desarrollo full stack de la intranet corporativa de Solarig, colaborando con áreas como RRHH, HSEQ e IT en herramientas internas orientadas a negocio. Actualmente estoy en búsqueda activa de una nueva oportunidad profesional.',
+        'He participado en el desarrollo full stack de la intranet corporativa de Solarig, colaborando con áreas como RRHH, HSEQ e IT en herramientas internas orientadas a negocio. Actualmente estoy en búsqueda activa de una oportunidad junior donde aportar base técnica, criterio de producto y capacidad de aprendizaje.',
     focus: [
         'Experiencia real con Laravel, PHP, JavaScript, TypeScript, React e Inertia.js.',
         'Base técnica amplia que une desarrollo web, sistemas, soporte IT y despliegue.',
@@ -157,7 +157,7 @@ export const experienceItems: TimelineItem[] = [
             'Diseño e implementación de un panel de administración con control de permisos por usuario, mejorando la seguridad y el acceso por rol.',
             'Desarrollo y mantenimiento de vistas y módulos principales de la intranet, unificando flujos internos para distintas áreas.',
             'Actualización progresiva de la aplicación entre versiones de Laravel, cuidando compatibilidad, mantenimiento y continuidad del servicio.',
-            'Integración de APIs y mejoras funcionales que agilizaron procesos internos y redujeron incidencias funcionales en torno a un 20% en operaciones recurrentes.',
+            'Integración de APIs y mejoras funcionales para agilizar procesos internos y reducir incidencias funcionales en operaciones recurrentes.',
         ],
     },
     {
@@ -184,7 +184,7 @@ export const experienceItems: TimelineItem[] = [
             'Trabajo con PHP, JavaScript, CSS, Node.js, Capacitor, Firebase y PostgreSQL.',
             'Implementación de funcionalidades orientadas a negocio, incluyendo una solución de gestión de incidencias clasificadas por zonas geolocalizadas.',
             'Colaboración en frontend, lógica de aplicación, conexión con base de datos y resolución de errores dentro del ciclo de desarrollo.',
-            'Contribución a la mejora de usabilidad y estabilidad, reduciendo tiempos de registro y seguimiento de incidencias en torno a un 15%.',
+            'Contribución a la mejora de usabilidad y estabilidad en el registro y seguimiento de incidencias.',
         ],
     },
     {
@@ -198,7 +198,7 @@ export const experienceItems: TimelineItem[] = [
             'Administración de SharePoint para gestión documental centralizada y soporte a flujos de trabajo internos.',
             'Gestión de dispositivos mediante Intune / Endpoint Manager, aplicando políticas de seguridad, inventario y despliegue de configuraciones.',
             'Supervisión de backups y apoyo a planes de recuperación ante desastres.',
-            'Soporte técnico a una media de 10-15 usuarios al día en incidencias de hardware, software, permisos, red, impresoras, correo y recursos corporativos.',
+            'Soporte técnico a usuarios en incidencias de hardware, software, permisos, red, impresoras, correo y recursos corporativos.',
         ],
     },
     {
