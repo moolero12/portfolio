@@ -3,9 +3,9 @@ import { heroStats, profile } from '@/data/portfolio';
 import { trackPlausibleEvent } from '@/lib/plausible';
 
 export function Hero() {
-    // La línea decorativa se pausa con el foco para evitar que parezca un cursor activo tras hacer click.
-    const caretClassName =
-        'mb-2 ml-2 inline-block h-[1.18em] w-[2px] translate-y-0.5 bg-[var(--color-primary)] align-middle opacity-80 motion-safe:animate-[blink-caret_1.15s_step-end_infinite] group-focus-within:animate-none group-active:animate-none';
+    // Línea decorativa estática para evitar que parezca un cursor de texto al hacer click.
+    const accentLineClassName =
+        'pointer-events-none mb-2 ml-2 inline-block h-[1.28em] w-[3px] translate-y-0.5 rounded-full bg-[var(--color-primary)] align-middle opacity-70 shadow-[0_0_12px_rgba(104,183,173,0.32)] select-none';
 
     return (
         <section
@@ -38,7 +38,7 @@ export function Hero() {
                             {profile.intro} {profile.summary}
                             <span
                                 aria-hidden="true"
-                                className={caretClassName}
+                                className={accentLineClassName}
                             />
                         </p>
                     </div>
