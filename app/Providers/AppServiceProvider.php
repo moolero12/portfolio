@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
         Date::use(CarbonImmutable::class);
 
         RateLimiter::for('portfolio', function (Request $request): Limit {
-            return Limit::perMinute((int) env('WEB_RATE_LIMIT_MAX_REQUESTS', 90))
+            return Limit::perMinute(90)
                 ->by($request->ip())
                 ->response(function () {
                     return response()->view('errors.too-many-requests', status: 429);

@@ -1,48 +1,70 @@
 # Portfolio de Diego Molero Menéndez
 
-Portfolio personal desarrollado con Laravel, React e Inertia.js.
+Portfolio personal desarrollado con **Laravel 13, React, Inertia.js y Tailwind CSS**. El objetivo del proyecto es presentar de forma clara mi perfil como **Desarrollador Full Stack Junior**, con experiencia en desarrollo web corporativo, aplicaciones híbridas, soporte IT, IA aplicada y automatización de procesos.
 
-## Plausible Analytics
+## Enfoque del proyecto
 
-Plausible es una solución de analítica web centrada en la privacidad. En esta integración se carga sin cookies, así que no requiere banner de cookies por defecto.
+Esta web está pensada como carta de presentación profesional para recruiters, equipos técnicos y empresas que busquen un perfil junior con base práctica y capacidad de crecimiento.
 
-### Configuración
+El portfolio destaca:
 
-Si Plausible te ha dado el snippet nuevo personalizado, usa esta variable:
+- Experiencia real en una intranet corporativa con PHP, Laravel, JavaScript, APIs, Linux y MariaDB.
+- Integración inicial de modelos de IA / LLMs en módulos internos y creación de un pequeño chatbot corporativo.
+- Pruebas de automatización con n8n y flujos conectados a APIs.
+- Proyectos propios completos, como mbuilder y mbuilder-desktop.
+- Base técnica transversal en desarrollo web, aplicaciones multiplataforma, bases de datos, sistemas y soporte IT.
 
-```env
-PLAUSIBLE_SCRIPT_SRC="https://plausible.io/js/tu-script-personalizado.js"
-```
+## Stack técnico
 
-Si prefieres la integración clásica, puedes usar esta alternativa:
+- **Backend:** Laravel 13, PHP, APIs REST
+- **Frontend:** React, Inertia.js, TypeScript, Tailwind CSS
+- **UI:** componentes propios con inspiración shadcn/ui
+- **SEO:** metadatos reutilizables, Open Graph, Twitter Cards, sitemap, robots.txt y JSON-LD
+- **Analytics:** Plausible Analytics, sin cookies por defecto
+- **Animación:** fondo sutil con Three.js, cargado de forma progresiva
+- **Calidad:** ESLint, Prettier, TypeScript y Pest/Laravel tests
 
-```env
-PLAUSIBLE_DOMAIN=midominio.com
-```
+## Secciones principales
 
-Laravel expone ambas opciones desde `config/services.php` y el script se carga globalmente desde [resources/views/app.blade.php](C:/Users/DIEGO/Desktop/PROGRAMACION/portfolio-DiegoMolero/resources/views/app.blade.php).
+- Hero con presentación profesional y llamada a proyectos/contacto
+- Sobre mí
+- Habilidades técnicas
+- Experiencia profesional
+- Formación académica
+- Proyectos destacados
+- Contacto y descarga de CV
 
-Prioridad de carga:
+## Proyectos destacados
 
-- si existe `PLAUSIBLE_SCRIPT_SRC`, se usa el snippet nuevo de Plausible
-- si no existe `PLAUSIBLE_SCRIPT_SRC` pero sí `PLAUSIBLE_DOMAIN`, se usa la integración clásica
-- si no existe ninguna de las dos, no se carga ningún script
+### mbuilder
 
-### Qué mide
+Plataforma web para montar PCs por piezas, validar compatibilidad entre componentes y calcular posibles cuellos de botella entre CPU y GPU. Desarrollada con Laravel, React, Inertia.js, TypeScript, MySQL, Tailwind CSS y APIs.
 
-- visitas y páginas vistas en todas las páginas públicas
-- eventos básicos en acciones relevantes del portfolio
+Demo: [www.mbuilder.es](https://www.mbuilder.es)
 
-### Eventos personalizados añadidos
+### mbuilder-desktop
 
-- `View Project Section`
-- `View Project`
-- `GitHub Click`
-- `Contact Click`
+Versión de escritorio de mbuilder desarrollada con Java, JavaFX, MySQL, APIs y CSS. Proyecto individual orientado a entorno desktop.
 
-### Cómo comprobar que funciona
+## SEO y privacidad
 
-1. Configura `PLAUSIBLE_SCRIPT_SRC` o `PLAUSIBLE_DOMAIN` con el valor real.
-2. Despliega la web o usa un entorno donde ese dominio apunte al portfolio.
-3. Abre DevTools y verifica que se carga el script de Plausible.
-4. Revisa el panel de Plausible para confirmar que entran páginas vistas y eventos.
+El proyecto incluye una capa SEO técnica y semántica:
+
+- Título y descripción SEO
+- Canonical URL
+- Open Graph y Twitter Cards
+- Sitemap en `/sitemap.xml`
+- Robots en `/robots.txt`
+- Schema.org JSON-LD para `Person`, `WebSite` y `WebPage`
+
+La analítica se realiza con Plausible, una alternativa privacy-friendly que no usa cookies por defecto, por lo que no requiere banner de cookies para esta integración.
+
+## Autor
+
+**Diego Molero Menéndez**  
+Desarrollador Full Stack Junior  
+Soria, España
+
+- Web: [dmolero.dev](https://dmolero.dev)
+- GitHub: [moolero12](https://github.com/moolero12)
+- LinkedIn: [Diego Molero Menéndez](https://www.linkedin.com/in/diego-molero-men%C3%A9ndez-6257b2354/)

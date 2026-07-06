@@ -25,3 +25,28 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+# Local OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local databases and generated runtime files
+/database/*.sqlite
+/database/*.sqlite-*
+/bootstrap/cache/*.php
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/framework/cache/data/*
+/storage/logs/*.log
+
+# Keep framework placeholders tracked
+!/bootstrap/cache/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/framework/cache/data/.gitignore
+!/storage/logs/.gitignore
+
+# Environment variants must stay local
+.env.*
+!.env.example

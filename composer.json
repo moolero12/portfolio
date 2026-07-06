@@ -2,10 +2,13 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "portfolio/diego-molero",
     "type": "project",
-    "description": "El portafolio de Diego Molero, un desarrollador web / multiplataforma",
+    "description": "Portfolio personal de Diego Molero Menendez, desarrollador Full Stack Junior con foco en Laravel, React, IA aplicada y automatizacion.",
     "keywords": [
         "laravel",
-        "framework"
+        "react",
+        "inertia",
+        "portfolio",
+        "ai-automation"
     ],
     "license": "MIT",
     "require": {
