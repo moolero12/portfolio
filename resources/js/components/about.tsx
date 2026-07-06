@@ -9,15 +9,16 @@ export function About() {
                 <SectionHeading
                     eyebrow="Sobre mí"
                     headingId="sobre-mi-heading"
-                    title="Una base técnica amplia, con foco claro en desarrollo web."
-                    description="Mi perfil combina experiencia en desarrollo corporativo, aplicaciones híbridas y soporte IT. Eso me permite entender mejor el contexto técnico de los productos y trabajar con una visión más completa."
+                    title="Una base técnica amplia, con foco en desarrollo web, producto interno e IA aplicada."
+                    description="Mi perfil combina experiencia en desarrollo corporativo, aplicaciones híbridas, soporte IT y automatización con IA. Eso me ayuda a entender el contexto técnico de los productos y a proponer mejoras útiles sin perder mantenibilidad."
                 />
 
                 <div className="space-y-4 rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface-soft)] p-6 shadow-[0_12px_40px_rgba(0,0,0,0.2)]">
                     <p className="text-base leading-7 text-[var(--color-muted)]">
                         Trabajo con una mentalidad práctica: entender el
-                        problema, construir una solución mantenible y mejorarla
-                        de forma iterativa.
+                        problema, construir una solución mantenible y apoyarme
+                        en automatizaciones cuando pueden ahorrar tiempo o
+                        mejorar la experiencia de usuario.
                     </p>
                     <ul className="grid gap-3">
                         {profile.focus.map((point) => (

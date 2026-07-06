@@ -50,32 +50,35 @@ export const profile = {
     location: 'Soria, España',
     role: 'Desarrollador Full Stack Junior',
     tagline:
-        'Laravel, React e Inertia.js para construir productos claros, útiles y mantenibles.',
-    intro: 'Desarrollador web y multiplataforma junior con experiencia profesional en desarrollo web corporativo, aplicaciones híbridas y soporte IT.',
+        'Laravel, React, automatización e IA aplicada para construir productos internos más útiles y mantenibles.',
+    intro: 'Desarrollador web y multiplataforma junior con experiencia profesional en desarrollo web corporativo, aplicaciones híbridas, soporte IT y automatización con IA.',
     summary:
-        'He participado en el desarrollo full stack de la intranet corporativa de Solarig, colaborando con áreas como RRHH, HSEQ e IT en herramientas internas orientadas a negocio. Actualmente estoy en búsqueda activa de una oportunidad junior donde aportar base técnica, criterio de producto y capacidad de aprendizaje.',
+        'He participado en el desarrollo full stack de la intranet corporativa de Solarig, incorporando módulos internos, paneles de administración, integraciones con APIs y funcionalidades basadas en modelos de IA. Actualmente estoy en búsqueda activa de una oportunidad junior donde aportar base técnica, criterio de producto y capacidad de aprendizaje.',
     focus: [
-        'Experiencia real con Laravel, PHP, JavaScript, TypeScript, React e Inertia.js.',
-        'Base técnica amplia que une desarrollo web, sistemas, soporte IT y despliegue.',
-        'Perfil junior serio, versátil y orientado a producto, mantenimiento evolutivo y resolución de incidencias.',
+        'Experiencia real con Laravel, PHP, JavaScript, TypeScript, React, Inertia.js y APIs.',
+        'Interés práctico por IA aplicada: integración de LLMs, chatbots internos, prompt engineering, n8n y automatización de workflows.',
+        'Base técnica amplia que une desarrollo web, sistemas, soporte IT, despliegues y resolución de incidencias.',
+        'Perfil junior serio, versátil y orientado a producto interno, mantenimiento evolutivo y mejora continua.',
     ],
 };
 
 export const heroStats = [
     { label: 'Ubicación', value: 'Soria, España' },
     { label: 'Stack base', value: 'Laravel, React, Inertia.js' },
+    { label: 'IA y automatización', value: 'LLMs, n8n, APIs' },
     { label: 'Situación actual', value: 'Buscando empleo' },
 ];
 
 export const skillGroups: SkillGroup[] = [
     {
-        title: 'Backend y lenguajes',
+        title: 'Backend y full stack',
         description:
-            'Lenguajes y tecnologías con las que desarrollo lógica de negocio, APIs y soluciones conectadas a datos.',
+            'Tecnologías con las que desarrollo lógica de negocio, APIs REST, módulos internos y soluciones conectadas a datos.',
         items: [
             'PHP',
             'Laravel',
-            'APIs',
+            'APIs REST',
+            'Node.js',
             'SQL',
             'PL/SQL',
             'Java',
@@ -86,7 +89,7 @@ export const skillGroups: SkillGroup[] = [
     {
         title: 'Frontend y aplicaciones',
         description:
-            'Interfaz, experiencia de uso y aplicaciones web o híbridas modernas.',
+            'Interfaz, experiencia de uso y aplicaciones web, híbridas o de escritorio.',
         items: [
             'JavaScript',
             'TypeScript',
@@ -97,13 +100,27 @@ export const skillGroups: SkillGroup[] = [
             'Tailwind CSS',
             'Capacitor',
             'JavaFX',
-            'Node.js',
+        ],
+    },
+    // Se destaca IA/automatización como foco real del CV sin exagerar seniority.
+    {
+        title: 'IA y automatización',
+        description:
+            'Experiencia inicial aplicada a producto interno: integración de modelos, chatbots corporativos y flujos conectados a APIs.',
+        items: [
+            'Modelos de IA / LLMs',
+            'Chatbots internos',
+            'Prompt engineering',
+            'n8n',
+            'Automatización de workflows',
+            'APIs de IA',
+            'Integración de APIs',
         ],
     },
     {
-        title: 'Bases de datos y herramientas',
+        title: 'Bases de datos, herramientas y DevOps',
         description:
-            'Trabajo diario con datos, control de versiones, pruebas, despliegues y depuración.',
+            'Trabajo diario con datos, control de versiones, pruebas, depuración, despliegues y entorno Linux.',
         items: [
             'MySQL',
             'PostgreSQL',
@@ -118,7 +135,9 @@ export const skillGroups: SkillGroup[] = [
             'Docker',
             'Testing',
             'Debugging',
-            'CI/CD básico',
+            'Despliegues',
+            'CI/CD básico/intermedio',
+            'Cloudflare',
         ],
     },
     {
@@ -141,6 +160,8 @@ export const skillGroups: SkillGroup[] = [
             'Servicios en red',
             'Soporte técnico',
             'Inventario',
+            'Hardware',
+            'Redes informáticas',
         ],
     },
 ];
@@ -154,10 +175,11 @@ export const experienceItems: TimelineItem[] = [
             'Prácticas profesionales de desarrollo full stack sobre la intranet corporativa de Solarig, dando soporte a áreas como RRHH, HSEQ e IT.',
         highlights: [
             'Desarrollo full stack con PHP, Laravel, JavaScript, APIs, Git, Linux y MariaDB en un entorno profesional real.',
-            'Diseño e implementación de un panel de administración con control de permisos por usuario, mejorando la seguridad y el acceso por rol.',
-            'Desarrollo y mantenimiento de vistas y módulos principales de la intranet, unificando flujos internos para distintas áreas.',
-            'Actualización progresiva de la aplicación entre versiones de Laravel, cuidando compatibilidad, mantenimiento y continuidad del servicio.',
-            'Integración de APIs y mejoras funcionales para agilizar procesos internos y reducir incidencias funcionales en operaciones recurrentes.',
+            'Diseño e implementación de un panel de administración con control de permisos por usuario, mejorando la seguridad y el acceso a vistas y acciones según rol.',
+            'Integración de modelos de IA / LLMs en módulos internos de la intranet, creando un pequeño chatbot corporativo para consultas sobre perfil e información interna autorizada.',
+            'Desarrollo de pruebas de automatización con n8n y flujos conectados a APIs para agilizar procesos internos y explorar integraciones entre aplicaciones corporativas.',
+            'Mantenimiento y evolución de módulos principales de la intranet, integrando APIs, corrigiendo incidencias funcionales y reduciendo en torno a un 20% errores recurrentes en operaciones internas.',
+            'Actualización progresiva de la aplicación entre versiones de Laravel, asegurando compatibilidad, mantenimiento y continuidad del servicio en entorno productivo.',
         ],
     },
     {
@@ -167,10 +189,10 @@ export const experienceItems: TimelineItem[] = [
         description:
             'Prácticas centradas en infraestructura Microsoft, soporte técnico, gestión documental y administración de dispositivos corporativos.',
         highlights: [
-            'Instalación, configuración y mantenimiento de Windows Server, DNS, DHCP, GPOs y entorno Active Directory.',
+            'Instalación, configuración y mantenimiento de infraestructura Microsoft, incluyendo Windows Server, DNS, DHCP, GPOs y entorno Active Directory.',
             'Administración de SharePoint para gestión documental centralizada y apoyo a flujos de trabajo internos.',
             'Gestión de dispositivos mediante Intune / Endpoint Manager, desplegando políticas de seguridad y controlando inventario.',
-            'Supervisión de copias de seguridad y apoyo en planes de recuperación ante desastres.',
+            'Supervisión de copias de seguridad y apoyo en planes de recuperación ante desastres para garantizar la disponibilidad de los datos.',
             'Soporte integral de hardware y software, gestión de tickets y creación de documentación técnica y guías de usuario.',
         ],
     },
@@ -183,8 +205,8 @@ export const experienceItems: TimelineItem[] = [
         highlights: [
             'Trabajo con PHP, JavaScript, CSS, Node.js, Capacitor, Firebase y PostgreSQL.',
             'Implementación de funcionalidades orientadas a negocio, incluyendo una solución de gestión de incidencias clasificadas por zonas geolocalizadas.',
-            'Colaboración en frontend, lógica de aplicación, conexión con base de datos y resolución de errores dentro del ciclo de desarrollo.',
-            'Contribución a la mejora de usabilidad y estabilidad en el registro y seguimiento de incidencias.',
+            'Colaboración en frontend, lógica de aplicación, conexión con base de datos y resolución de errores dentro del ciclo completo de desarrollo.',
+            'Contribución a la mejora de usabilidad y estabilidad, reduciendo tiempos de registro y seguimiento de incidencias en torno a un 15%.',
         ],
     },
     {
@@ -197,8 +219,8 @@ export const experienceItems: TimelineItem[] = [
             'Instalación, configuración y mantenimiento de entornos Microsoft, incluyendo Windows Server, DNS, DHCP, GPOs y Active Directory.',
             'Administración de SharePoint para gestión documental centralizada y soporte a flujos de trabajo internos.',
             'Gestión de dispositivos mediante Intune / Endpoint Manager, aplicando políticas de seguridad, inventario y despliegue de configuraciones.',
-            'Supervisión de backups y apoyo a planes de recuperación ante desastres.',
-            'Soporte técnico a usuarios en incidencias de hardware, software, permisos, red, impresoras, correo y recursos corporativos.',
+            'Supervisión de backups y apoyo a planes de recuperación ante desastres para garantizar la disponibilidad de los datos.',
+            'Soporte técnico integral a una media de 10-15 usuarios al día, resolviendo incidencias de hardware, software, permisos, red, impresoras, correo y acceso a recursos corporativos.',
         ],
     },
     {
@@ -208,10 +230,10 @@ export const experienceItems: TimelineItem[] = [
         description:
             'Primer contacto profesional con diagnóstico, reparación, montaje y puesta a punto de equipos informáticos.',
         highlights: [
-            'Diagnóstico, reparación, montaje y mantenimiento de equipos para entornos internos y clientes externos.',
+            'Diagnóstico, reparación, montaje y mantenimiento de equipos informáticos para entornos internos y clientes externos.',
             'Instalación de sistemas operativos, configuración de red, cableado básico y sustitución de componentes hardware.',
             'Apoyo en administración de redes, conectividad y mantenimiento preventivo/correctivo de equipos y periféricos.',
-            'Atención técnica a clientes y necesidades internas, mejorando tiempos de respuesta y disponibilidad de equipos.',
+            'Atención técnica tanto a clientes como a necesidades internas, mejorando tiempos de respuesta y disponibilidad de equipos.',
         ],
     },
 ];
@@ -257,7 +279,7 @@ export const projects: Project[] = [
         summary:
             'Plataforma web para montar PCs por piezas con validación técnica y cálculos orientados al usuario.',
         description:
-            'Proyecto de fin de grado en DAW desarrollado de forma integral: arquitectura, backend, frontend, base de datos, lógica de compatibilidad, consumo de APIs y despliegue.',
+            'Proyecto de fin de grado en DAW desarrollado de forma integral: arquitectura, backend, frontend, base de datos, lógica de compatibilidad, consumo de APIs y despliegue en producción sobre VPS con dominio propio, Cloudflare/SSL y entorno Linux.',
         stack: [
             'PHP',
             'Laravel',
@@ -282,7 +304,7 @@ export const projects: Project[] = [
         summary:
             'Versión de escritorio del proyecto, enfocada a entorno desktop y arquitectura individual.',
         description:
-            'Proyecto de fin de grado en DAM desarrollado íntegramente de forma individual, con interfaz JavaFX, conexión a MySQL, APIs externas y pruebas funcionales.',
+            'Proyecto de fin de grado en DAM desarrollado íntegramente de forma individual, adaptando la lógica de compatibilidad de hardware a un entorno desktop con JavaFX, MySQL, APIs externas y pruebas funcionales.',
         stack: ['Java', 'JavaFX', 'MySQL', 'APIs', 'CSS'],
         imageSrc: '/mbuilder-desktop.png',
         imageAlt:

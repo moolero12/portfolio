@@ -1,15 +1,18 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Portfolio de Diego Molero Menéndez</title>
-  <desc id="desc">Imagen Open Graph del portfolio de Diego Molero Menéndez, desarrollador Full Stack Junior en búsqueda activa de empleo.</desc>
+  <desc id="desc">Imagen Open Graph del portfolio de Diego Molero Menéndez, desarrollador Full Stack Junior con foco en IA aplicada y automatización.</desc>
   <rect width="1200" height="630" fill="#0C1117"/>
   <path d="M0 0H1200V630H0V0Z" fill="url(#background)"/>
   <path d="M96 112C96 86.49 116.49 66 142 66H1058C1083.51 66 1104 86.49 1104 112V518C1104 543.51 1083.51 564 1058 564H142C116.49 564 96 543.51 96 518V112Z" fill="#121A22" stroke="#263541"/>
   <path d="M146 164H346M146 205H286M146 246H414M786 164H1018M858 205H1018M746 246H1018" stroke="#68B7AD" stroke-opacity="0.34" stroke-width="5" stroke-linecap="round"/>
-  <path d="M760 342L820 292M760 342L820 392M908 290L868 394M1002 292L942 342M1002 392L942 342" stroke="#D79665" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="146" y="330" fill="#68B7AD" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="8">DMOLERO.DEV</text>
-  <text x="146" y="408" fill="#EDF3F7" font-family="Fraunces, Georgia, serif" font-size="58" font-weight="650">Diego Molero Menéndez</text>
-  <text x="146" y="468" fill="#9EABB6" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="600">Desarrollador Full Stack Junior</text>
-  <text x="146" y="515" fill="#9EABB6" font-family="Manrope, Arial, sans-serif" font-size="23" font-weight="500">Laravel · React · Inertia.js · Aplicaciones híbridas · Soporte IT</text>
+  <path d="M750 350C792 298 858 292 900 344C930 381 978 388 1014 338" stroke="#D79665" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+  <path d="M780 340L812 308M780 340L812 372M918 306L884 376M1002 308L970 340M1002 372L970 340" stroke="#68B7AD" stroke-opacity="0.62" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="900" cy="344" r="11" fill="#68B7AD" fill-opacity="0.8"/>
+  <circle cx="1014" cy="338" r="8" fill="#D79665" fill-opacity="0.85"/>
+  <text x="146" y="318" fill="#68B7AD" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="8">DMOLERO.DEV</text>
+  <text x="146" y="396" fill="#EDF3F7" font-family="Fraunces, Georgia, serif" font-size="58" font-weight="650">Diego Molero Menéndez</text>
+  <text x="146" y="456" fill="#9EABB6" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="600">Desarrollador Full Stack Junior</text>
+  <text x="146" y="505" fill="#9EABB6" font-family="Manrope, Arial, sans-serif" font-size="23" font-weight="500">Laravel · React · Inertia.js · IA aplicada · n8n · APIs</text>
   <defs>
     <radialGradient id="background" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(212 110) rotate(38) scale(740 520)">
       <stop stop-color="#68B7AD" stop-opacity="0.18"/>

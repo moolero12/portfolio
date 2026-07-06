@@ -110,7 +110,7 @@ export function Hero() {
                                 </p>
                             </div>
 
-                            <div className="grid gap-4 sm:grid-cols-3">
+                            <div className="grid gap-4 sm:grid-cols-2">
                                 {heroStats.map((stat) => (
                                     <div
                                         key={stat.label}

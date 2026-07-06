@@ -15,8 +15,8 @@ export function SkillsGrid() {
                 <SectionHeading
                     eyebrow="Habilidades"
                     headingId="habilidades-heading"
-                    title="Tecnologías y herramientas con las que ya trabajo."
-                    description="He evitado barras o porcentajes artificiales. Prefiero mostrar con claridad el stack que uso, el entorno en el que he trabajado y la base técnica que aporta valor al perfil."
+                    title="Tecnologías, IA aplicada y herramientas con las que ya trabajo."
+                    description="He evitado barras o porcentajes artificiales. Prefiero mostrar con claridad el stack real, el entorno profesional en el que he trabajado y las nuevas capacidades de automatización que aportan valor al perfil."
                 />
 
                 <div className="grid gap-6 md:grid-cols-2">
