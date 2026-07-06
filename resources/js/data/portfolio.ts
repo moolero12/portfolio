@@ -327,8 +327,8 @@ export const contactLinks: ContactLink[] = [
     },
     {
         label: 'LinkedIn',
-        value: 'linkedin.com/in/diego-molero',
-        href: 'https://www.linkedin.com/in/diego-molero-men%C3%A9ndez-6257b2354/',
+        value: 'linkedin.com/in/diegomolerodev',
+        href: 'https://www.linkedin.com/in/diegomolerodev',
     },
     {
         label: 'Web',

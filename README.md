@@ -67,4 +67,4 @@ Soria, España
 
 - Web: [dmolero.dev](https://dmolero.dev)
 - GitHub: [moolero12](https://github.com/moolero12)
-- LinkedIn: [Diego Molero Menéndez](https://www.linkedin.com/in/diego-molero-men%C3%A9ndez-6257b2354/)
+- LinkedIn: [Diego Molero Menéndez](https://www.linkedin.com/in/diegomolerodev)

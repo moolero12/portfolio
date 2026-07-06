@@ -39,7 +39,7 @@ class PageSeo
                     'email' => 'mailto:diegomolero97@gmail.com',
                     'sameAs' => [
                         'https://github.com/moolero12',
-                        'https://www.linkedin.com/in/diego-molero-men%C3%A9ndez-6257b2354/',
+                        'https://www.linkedin.com/in/diegomolerodev',
                         'https://dmolero.dev',
                     ],
                     'knowsAbout' => [
