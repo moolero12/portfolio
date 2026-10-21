@@ -22,13 +22,13 @@ export function Hero() {
                         </span>
                         <div className="space-y-4">
                             <p className="text-sm tracking-[0.28em] text-[var(--color-muted)] uppercase">
-                                {profile.location}
+                                {profile.name} · {profile.location}
                             </p>
                             <h1
                                 id="inicio-heading"
                                 className="max-w-4xl font-serif text-5xl leading-none text-balance text-[var(--color-text)] sm:text-6xl lg:text-7xl"
                             >
-                                {profile.name}
+                                Construyo producto interno con IA
                             </h1>
                             <p className="max-w-3xl text-xl leading-8 font-medium text-[var(--color-text)] sm:text-2xl">
                                 {profile.role}
