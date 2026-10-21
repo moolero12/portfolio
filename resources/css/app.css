@@ -14,13 +14,13 @@
         'Geist Mono Variable', ui-monospace, SFMono-Regular, 'SF Mono', Menlo,
         Consolas, 'Liberation Mono', monospace;
 
-    --color-background: #0c1117;
-    --color-surface: #121a22;
-    --color-surface-strong: #18222d;
-    --color-surface-soft: rgba(18, 26, 34, 0.84);
+    --color-background: #0b0f1c;
+    --color-surface: #14192c;
+    --color-surface-strong: #1c243c;
+    --color-surface-soft: rgba(20, 25, 44, 0.86);
     --color-text: #edf3f7;
     --color-muted: #9eabb6;
-    --color-line: rgba(171, 190, 208, 0.18);
+    --color-line: rgba(176, 186, 220, 0.18);
     --color-primary: #68b7ad;
     --color-primary-strong: #4f978f;
     --color-primary-soft: rgba(104, 183, 173, 0.16);
@@ -36,15 +36,15 @@
         background:
             radial-gradient(
                 circle at top left,
-                rgba(104, 183, 173, 0.16),
+                rgba(104, 183, 173, 0.14),
                 transparent 32%
             ),
             radial-gradient(
                 circle at top right,
-                rgba(215, 150, 101, 0.14),
-                transparent 24%
+                rgba(129, 108, 214, 0.18),
+                transparent 28%
             ),
-            linear-gradient(180deg, #111821 0%, #0c1117 46%, #090d12 100%);
+            linear-gradient(180deg, #161b32 0%, #0b0f1c 46%, #080910 100%);
         color: var(--color-text);
     }
 
@@ -56,7 +56,7 @@
         pointer-events: none;
         background-image: radial-gradient(
             circle,
-            rgba(104, 183, 173, 0.045) 1px,
+            rgba(129, 108, 214, 0.055) 1px,
             transparent 1px
         );
         background-size: 24px 24px;

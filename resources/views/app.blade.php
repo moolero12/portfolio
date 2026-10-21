@@ -23,7 +23,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="color-scheme" content="dark">
-        <meta name="theme-color" content="#0c1117">
+        <meta name="theme-color" content="#0b0f1c">
         <meta name="description" content="{{ $pageDescription }}">
         <meta name="author" content="{{ $seoDefaults['author'] ?? config('app.name') }}">
         <meta name="robots" content="{{ $pageRobots }}">
